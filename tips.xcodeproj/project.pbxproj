@@ -13,6 +13,8 @@
 		020C30101A3E730A00A43A8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020C300F1A3E730A00A43A8E /* Images.xcassets */; };
 		020C30131A3E730A00A43A8E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020C30111A3E730A00A43A8E /* LaunchScreen.xib */; };
 		020C301F1A3E730A00A43A8E /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C301E1A3E730A00A43A8E /* tipsTests.swift */; };
+		020C30291A3E89EC00A43A8E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C30281A3E89EC00A43A8E /* SettingsViewController.swift */; };
+		020C307A1A4B618000A43A8E /* TabberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020C30791A4B618000A43A8E /* TabberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		020C30181A3E730A00A43A8E /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		020C301D1A3E730A00A43A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		020C301E1A3E730A00A43A8E /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
+		020C30281A3E89EC00A43A8E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		020C30791A4B618000A43A8E /* TabberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,8 @@
 		020C30051A3E730A00A43A8E /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				020C302A1A3E89F700A43A8E /* ViewController */,
 				020C30081A3E730A00A43A8E /* AppDelegate.swift */,
-				020C300A1A3E730A00A43A8E /* ViewController.swift */,
 				020C300C1A3E730A00A43A8E /* Main.storyboard */,
 				020C300F1A3E730A00A43A8E /* Images.xcassets */,
 				020C30111A3E730A00A43A8E /* LaunchScreen.xib */,
@@ -110,6 +114,16 @@
 				020C301D1A3E730A00A43A8E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		020C302A1A3E89F700A43A8E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				020C300A1A3E730A00A43A8E /* ViewController.swift */,
+				020C30281A3E89EC00A43A8E /* SettingsViewController.swift */,
+				020C30791A4B618000A43A8E /* TabberViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020C307A1A4B618000A43A8E /* TabberViewController.swift in Sources */,
 				020C300B1A3E730A00A43A8E /* ViewController.swift in Sources */,
 				020C30091A3E730A00A43A8E /* AppDelegate.swift in Sources */,
+				020C30291A3E89EC00A43A8E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +352,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +367,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -405,6 +430,7 @@
 				020C30241A3E730A00A43A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		020C30251A3E730A00A43A8E /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +439,7 @@
 				020C30271A3E730A00A43A8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
